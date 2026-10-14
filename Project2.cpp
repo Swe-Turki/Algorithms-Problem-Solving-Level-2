@@ -104,7 +104,7 @@ string Type(QAType type)
     return arrTypeName[type - 1];
 }
 
-bool PrintRightOrWrong(int Result , int UserInput){
+bool checkUserSolution(int Result , int UserInput){
 
     return (Result == UserInput);
 }
@@ -169,7 +169,7 @@ void PlayGame(){
         cout<< endl;
         Result = Calculator(Number1,Number2,ActuleType);
         
-        if (PrintRightOrWrong(Result , UserInput)){
+        if (checkUserSolution(Result , UserInput)){
             cout << "Right Answer:-)"<<endl;
             RightAnswer++;
         }
